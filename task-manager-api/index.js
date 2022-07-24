@@ -2,8 +2,12 @@ const express = require("express")
 
 const app = express()
 
-console.log("hello this is test")
+const port = process.env.PORT || 3000
 
-app.listen(3000, () => {
+app.get('/', (req, res) => {
+    res.send("hello there is nodemon working ?")
+})
+
+app.listen(port, () => {
     console.log('listening to port 3000');
 })
